@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import {useState} from "react"
 import { ChangePwToApi, numberVerification, FindIdToApi } from "../components/api"
 import { NavBar } from "../components/navBar"
-const Find = () => {
+const FindPage = () => {
     const [password, setPw] = useState("");
     const [whatFind, setFind] = useState("-1");
     const [number, setNumber] = useState("");
@@ -30,7 +30,8 @@ const Find = () => {
 
     return(
         <>
-        <NavBar></NavBar>
+        <NavBar/>
+        
         <div style={style}>
             <div className={style.loginPage}>
             <div className={style.form}>
@@ -90,4 +91,4 @@ const Find = () => {
         </>
     )
 }
-export default Find;
+export default FindPage;

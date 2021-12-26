@@ -35,7 +35,7 @@ export const numberVerification = async (event, number) => { // 인증번호 전
     verifyCheck(number, verificationCode)
  }
  
- export const verifyCheck = async (number, verificationCode) => {  // 인증번호 입력후 토큰 발급
+export const verifyCheck = async (number, verificationCode) => {  // 인증번호 입력후 토큰 발급
     console.log("starting Check!!")
     console.log(number)
     console.log(verificationCode)
@@ -98,6 +98,7 @@ export const FindIdToApi = async (event) => {
 
 export const registerToApi = async (event, id, username, number, password) => { // 회원가입 api 요청
     console.log("We will register you..")
+    console.log(id,username,number,password)
     event.preventDefault();
     const request = await fetch("https://api.pukuba.dev/api/v1/auth/sign-up", {
         method:'POST',

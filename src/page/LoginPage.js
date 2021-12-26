@@ -1,8 +1,9 @@
 import style from "../css/Login.module.css"
 import {Link} from "react-router-dom"
 import {useState} from "react"
-import { setCookie } from "../components/cookie"
+import {loginToApi} from "../components/api"
 import { NavBar } from "../components/navBar"
+
 const LoginPage = () => {
     const [id, setId] = useState("");
     const [password, setPw] = useState("");
@@ -16,25 +17,9 @@ const LoginPage = () => {
         event.preventDefault();
         loginToApi(id, password);
     }
-    const loginToApi = async () => {
-        const request = await fetch(`https://api.pukuba.dev/api/v1/auth/sign-in`, {
-            method:'POST',
-            headers:{
-                'Content-Type' : 'application/json' 
-            },
-            body: JSON.stringify({
-                "id" : id,
-                "password" : password
-            })
-        })
-        const result = await request.json() // result.user.id -> id, result.accesstoken -> token
-        console.log(result)
-        console.log(result.accessToken);
-        setCookie(result.user.id, result.accessToken, 1);
-    }
     return(
         <>
-        <NavBar></NavBar>
+        <NavBar/>
         <div style={style}>
             <div className={style.loginPage}>
             <div className={style.form}>

@@ -3,6 +3,7 @@ import {useState} from "react"
 import style from "../css/Login.module.css"
 import { numberVerification, registerToApi } from "../components/api"
 import { NavBar } from "../components/navBar"
+
 const RegisterPage = () =>{
     const [id, setId] = useState("");
     const [password, setPw] = useState("");
@@ -23,7 +24,7 @@ const RegisterPage = () =>{
 
     return(
         <>
-        <NavBar></NavBar>
+        <NavBar/>
         <div style={style}>
                 <div className={style.loginPage}>
                 <div className={style.form}>
