@@ -10,6 +10,7 @@ import LoginPage from './page/LoginPage';
 import Find from './page/FindPage';
 import RegisterPage from './page/RegisterPage';
 import VideoPage from './page/VideoPage';
+import UploadPage from './page/UploadPage';
 function App() {
   return (
     <>
@@ -19,7 +20,8 @@ function App() {
       <Route path='/login' element={<LoginPage/>}></Route>
       <Route path='/video' element={<VideoPage link={'https://youtu.be/V7gjxv7ZrdY'}/>}></Route>
       <Route path='/register' element={<RegisterPage/>}></Route>
-      <Route path='Find' element={<Find/>}></Route>
+      <Route path='/find' element={<Find/>}></Route>
+      <Route path='/upload' element={<UploadPage/>}></Route>
     </Routes>
    
     
