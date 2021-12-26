@@ -1,4 +1,4 @@
-import {Pagination,Stack} from 'react-bootstrap';
+import {Pagination,Stack,Row} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
@@ -8,8 +8,9 @@ import styled from 'styled-components';
 
 export function UnderBar (){
     return(
-        <Stack gap={2} className='col-md-5 mx-auto'>
-        <Pagination>
+        
+        <Stack  gap={2} className='col-md-2 mx-auto'  >
+        <Pagination >
             <Pagination.First />
             <Pagination.Prev />
             <Pagination.Item active>{1}</Pagination.Item>

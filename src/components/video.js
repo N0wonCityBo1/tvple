@@ -12,7 +12,7 @@ const Movie = styled.a`
 
 export function Videos (title){
     return(
-        <Stack direction='horizontal' gap={3}>
+        <Stack direction='horizontal' gap={5} className='justify-content-md-center' >
         <Movie href='http://naver.com'>
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="/thumb.svg" />
@@ -24,7 +24,7 @@ export function Videos (title){
             </Card.Body>
         </Card>
         </Movie>
-        <Movie href='http://google.com'>
+        <Movie href='/video'>
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="/thumb.svg" />
             <Card.Body>
