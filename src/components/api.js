@@ -19,6 +19,24 @@ export const loginToApi = async (id, password) => { // 로그인
     setCookie(result.user.id, result.accessToken, 1);
 }
 
+export const uploadToApi = async (video,title,desc) => { // 로그인
+    const request = await fetch(`https://api.pukuba.dev/api/v1/media/upload`, {
+        method:'POST',
+        headers:{
+            'Content-Type' : 'application/json' 
+        },
+        body: JSON.stringify({
+            "file" : video,
+            "title" : title,
+            "description" : desc
+        })
+    })
+    const result = await request.json() // result.user.id -> id, result.accesstoken -> token
+    console.log(result)
+    
+   
+}
+
 export const numberVerification = async (event, number) => { // 인증번호 전송
     event.preventDefault();
     console.log(number)

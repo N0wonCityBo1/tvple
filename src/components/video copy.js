@@ -24,6 +24,17 @@ export function Videos (title){
             </Card.Body>
         </Card>
         </Movie>
+        <Movie href='/video'>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="/thumb.svg" />
+            <Card.Body>
+                <Card.Title>영상2</Card.Title>
+                <Card.Text>
+                영상2 설명
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        </Movie>
         
         </Stack>
     )

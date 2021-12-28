@@ -11,14 +11,17 @@ import Find from './page/FindPage';
 import RegisterPage from './page/RegisterPage';
 import VideoPage from './page/VideoPage';
 import UploadPage from './page/UploadPage';
+import Main from './page/MainPage copy'
 function App() {
   return (
     <>
     
     <Routes>
       <Route path='/' element={<MainPage/>}></Route>
+      <Route path='/main' element={<Main/>}></Route>
       <Route path='/login' element={<LoginPage/>}></Route>
-      <Route path='/video' element={<VideoPage link={'https://youtu.be/V7gjxv7ZrdY'}/>}></Route>
+      <Route path='/1' element={<VideoPage link={'https://youtu.be/V7gjxv7ZrdY'}/>}></Route>
+      <Route path='/2' element={<VideoPage link={'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'}/>}></Route>
       <Route path='/register' element={<RegisterPage/>}></Route>
       <Route path='/find' element={<Find/>}></Route>
       <Route path='/upload' element={<UploadPage/>}></Route>
